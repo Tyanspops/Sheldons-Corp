@@ -77,7 +77,7 @@ button.addEventListener("click", function () {
       p1b8.style.display = "none";
     }
     p1p += randomNumber;
-    if (p1p >= 8) {
+    if (p1p >= 9) {
       p1p -= 8;
       p1m += 200;
     }
@@ -321,7 +321,7 @@ button.addEventListener("click", function () {
       p2b8.style.display = "none";
     }
     p2p += randomNumber;
-    if (p2p >= 8) {
+    if (p2p >= 9) {
       p2p -= 8;
       p2m += 200;
     }
