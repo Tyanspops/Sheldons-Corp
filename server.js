@@ -1,33 +1,15 @@
-const express = require('express');
+const express = require("express"); 
 const app = express();
-const playerQueue = [];
 
-app.post('/register', (req, res) => {
-  const player = {
-    id: req.body.id,
-    skillLevel: req.body.skillLevel,
-  };
-  playerQueue.push(player);
+app.use(express.static("./public"));
 
-  res.status(200).send('Player registered successfully');
+app.get("/", function(req,res) {
+    res.sendFile(__dirname + "");
+});
+app.post("/", function(req,res) {
+     res.sendFile(__dirname + "");
 });
 
-app.get('/matchmake', (req, res) => {
-  if (playerQueue.length < 2) {
-    res.status(400).send('Not enough players in the queue');
-    return;
-  }
-
-  const player1 = playerQueue.shift();
-  const player2 = playerQueue.shift();
-  
-  const match = {
-    id: 'match-id',
-    players: [player1, player2],
-  };
-  res.status(200).json(match);
-});
-
-app.listen(3000, () => {
-  console.log('Server started on port 3000');
+app.listen(process.env.PORT || 3000, function() {
+    console.log(`Server is running on port ${process.env.PORT}.`);
 });
