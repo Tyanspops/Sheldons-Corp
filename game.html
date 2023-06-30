@@ -202,7 +202,9 @@
         </p>
         <div class="buttonbottom">
           <br />
-          <a id="about" onclick="gameaboutus()">About Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+          <form action="/gameaboutus" method="POST">
+            <a href="/aboutus.html" id="about">About Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </form>
           <a id="terms" href=""
             >Terms &amp Conditions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a
           >
@@ -1418,10 +1420,5 @@ var r5 = document.getElementById("r5");
 var r6 = document.getElementById("r6");
 var r7 = document.getElementById("r7");
 var r8 = document.getElementById("r8");
-
-function gameaboutus(){
-  app.post("/", function(req,res) {
-     res.sendFile(__dirname + "/aboutus.html");
-});
 
 </script>
