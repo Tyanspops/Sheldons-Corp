@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/faq.css" />
+    <link href="https://fonts.cdnfonts.com/css/blogger-sans" rel="stylesheet" />
+  </head>
+  <body>
+    <img
+      id="bg"
+      src="https://images.pexels.com/photos/355747/pexels-photo-355747.jpeg?cs=srgb&dl=pexels-pixabay-355747.jpg&fm=jpg"
+    />
+    <img
+      id="logo"
+      src="https://cdn.glitch.global/09c59a10-787f-4404-9500-495ae436d4ac/image.png?v=1687927458059"
+    />
+    <nav class="topnav">
+      <ul>
+        <li><a href="">About Us</a></li>
+        <li><a href="">Terms &amp Conditions</a></li>
+        <li><a href="">FAQ</a></li>
+        <li><a href="">Blog</a></li>
+      </ul>
+    </nav>
+    <h1>F A Q</h1>
+    <p id="faq1" data-original-question="What is Sheldon's Corp?">
+      Question 1: What is Sheldon's Corp?
+    </p>
+    <p
+      id="faq2"
+      data-original-question="How can I play Monopoly on Sheldon's Corp?"
+    >
+      Question 2: How can I play Monopoly on Sheldon's Corp?
+    </p>
+    <p
+      id="faq3"
+      data-original-question="Is registration required to play games on Sheldon's Corp?"
+    >
+      Question 3: Is registration required to play games on Sheldon's Corp?
+    </p>
+    <p
+      id="faq4"
+      data-original-question="Are there any fees associated with using Sheldon's Corp?"
+    >
+      Question 4: Are there any fees associated with using Sheldon's Corp?
+    </p>
+    <p
+      id="faq5"
+      data-original-question="How can I contact customer support for Sheldon's Corp?"
+    >
+      Question 5: How can I contact customer support for Sheldon's Corp?
+    </p>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var faq1 = document.getElementById("faq1");
+        var faq2 = document.getElementById("faq2");
+        var faq3 = document.getElementById("faq3");
+        var faq4 = document.getElementById("faq4");
+        var faq5 = document.getElementById("faq5");
+
+        function changeText(faqElement) {
+          var currentText = faqElement.innerHTML;
+          var originalQuestion = faqElement.getAttribute(
+            "data-original-question"
+          );
+
+          if (currentText === originalQuestion) {
+            if (faqElement === faq1) {
+              faqElement.innerHTML =
+                "Sheldon's Corp is a website dedicated to recreating the popular board game Monopoly and featuring Sheldon the Tiny Dinosaur as the star.";
+            } else if (faqElement === faq2) {
+              faqElement.innerHTML =
+                "To play Monopoly on Sheldon's Corp, navigate to the Games section on our website and select the Monopoly game. Follow the instructions provided to start playing.";
+            } else if (faqElement === faq3) {
+              faqElement.innerHTML =
+                "No, registration is not required to play games on Sheldon's Corp. You can play as a guest user. However, creating an account provides additional features and benefits.";
+            } else if (faqElement === faq4) {
+              faqElement.innerHTML =
+                "Using Sheldon's Corp is completely free. There are no fees associated with playing games or accessing our services.";
+            } else if (faqElement === faq5) {
+              faqElement.innerHTML =
+                "To contact customer support for Sheldon's Corp, you can reach out to our dedicated support team through our contact page. We strive to respond to all inquiries promptly.";
+            }
+          } else {
+            faqElement.innerHTML = originalQuestion;
+          }
+        }
+
+        faq1.addEventListener("click", function () {
+          changeText(faq1);
+        });
+
+        faq2.addEventListener("click", function () {
+          changeText(faq2);
+        });
+
+        faq3.addEventListener("click", function () {
+          changeText(faq3);
+        });
+
+        faq4.addEventListener("click", function () {
+          changeText(faq4);
+        });
+
+        faq5.addEventListener("click", function () {
+          changeText(faq5);
+        });
+      });
+    </script>
+  </body>
+</html>
