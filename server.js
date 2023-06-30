@@ -10,6 +10,15 @@ app.post("/", function(req,res) {
      res.sendFile(__dirname + "/game.html");
 });
 
+function gameaboutus(){
+  app.post("/", function(req,res) {
+     res.sendFile(__dirname + "/aboutus.html");
+});
+}
+
+
+
+
 app.listen(process.env.PORT || 3000, function() {
     console.log(`Server is running on port ${process.env.PORT}.`);
 });
