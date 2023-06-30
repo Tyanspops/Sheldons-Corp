@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  color: #efeee8;
+  font-family: "Blogger Sans", sans-serif;
+  background-color: transparent;
+  color: #1b1b1b;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-weight: bold;
+}
+
+p {
+  background-color: #efeee8;
+  color: #1b1b1b;
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 25px;
+  background-color: #efeee8;
+  overflow-x: hidden;
+}
+
+button {
+  color: #1b1b1b;
+  font-size: 25px;
+  padding: 20px;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  top: 600px;
+  position: fixed;
+  background-color: transparent;
+  height: 8vh;
+  width: 12vw;
+}
+
+h1 {
+  font-size: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30vh;
+  position: fixed;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  color: #1b1b1b;
+}
+
+#bg {
+  width: 100vw;
+  height: 100vh;
+}
+
+#logo {
+  border-radius: 100%;
+  left: 3%;
+  top: 5vh;
+  position: fixed;
+  height: 175px;
+  width: 175px;
+  border: 1px solid black;
+  transition: box-shadow 0.3s ease;
+}
+
+#logo:hover {
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+}
+
+#intro {
+  text-align: center;
+  font-size: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50vh;
+  position: fixed;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  color: #1b1b1b;
+}
+
+.topnav {
+  background-color: transparent;
+  text-align: right;
+  position: absolute;
+  top: 3vh;
+  right: 2vw;
+  color: #1b1b1b;
+}
+
+.topnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #1b1b1b;
+  background-color: transparent;
+}
+
+.topnav li {
+  position: relative;
+  list-style: none;
+  display: inline-block;
+}
+
+.topnav li::before {
+  position: absolute;
+  top: 3vh;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  z-index: -1;
+}
+
+.topnav li:hover::before {
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.topnav li a {
+  color: #1b1b1b;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.topnav li:hover a {
+  background-color: rgba(0, 0, 0, 0.3);
+}
