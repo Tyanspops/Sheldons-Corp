@@ -9,19 +9,27 @@
       id="bg"
       src="https://images.pexels.com/photos/355747/pexels-photo-355747.jpeg?cs=srgb&dl=pexels-pixabay-355747.jpg&fm=jpg"
     />
-    <img
-      id="logo"
-      src="https://cdn.glitch.global/09c59a10-787f-4404-9500-495ae436d4ac/image.png?v=1687927458059"
-    />
+    <form action="/homehome" method="POST">
+      <button type="submit">
+        <img
+          id="logo"
+          src="https://cdn.glitch.global/09c59a10-787f-4404-9500-495ae436d4ac/image.png?v=1687927458059"
+        />
+      </button>
+    </form>
     <h1>SHELDONS CORP</h1>
-    <nav class="topnav">
-      <ul>
-        <li id><a href="">About Us</a></li>
-        <li><a href="">Terms &amp Conditions</a></li>
-        <li><a href="">FAQ</a></li>
-        <li><a href="">Blog</a></li>
-      </ul>
-    </nav>
+    <form action="/homeaboutus" method="POST">
+      <button id="about" type="submit">About Us</button>
+    </form>
+    <form action="/hometerms" method="POST">
+      <button id="terms" type="submit">Terms &amp Conditions</button>
+    </form>
+    <form action="/homefaq" method="POST">
+      <button id="faq" type="submit">FAQ</button>
+    </form>
+    <form action="/homeblog" method="POST">
+      <button id="blog" type="submit">Blog</button>
+    </form>
     <p id="intro">
       Welcome to Sheldon's Corp, the ultimate online Monopoly-inspired
       experience! Buy, sell, and trade properties, showcase your financial
@@ -29,11 +37,11 @@
       true in Sheldon's Corp!
     </p>
     <form method="post" action="/">
-      <button type="submit">Start Game</button>
+      <button id="startgame" type="submit">Start Game</button>
     </form>
   </body>
 </html>
-<style>
+<script>
   * {
   margin: 0;
   padding: 0;
@@ -60,7 +68,7 @@ body {
   overflow-x: hidden;
 }
 
-button {
+#startgame {
   color: #1b1b1b;
   font-size: 25px;
   padding: 20px;
@@ -118,53 +126,71 @@ h1 {
   color: #1b1b1b;
 }
 
-.topnav {
-  background-color: transparent;
-  text-align: right;
+#about {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
   position: absolute;
-  top: 3vh;
-  right: 2vw;
+  top: 0px;
+  right: 23.3vw;
   color: #1b1b1b;
-}
-
-.topnav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  color: #1b1b1b;
-  background-color: transparent;
-}
-
-.topnav li {
-  position: relative;
-  list-style: none;
-  display: inline-block;
-}
-
-.topnav li::before {
-  position: absolute;
-  top: 3vh;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: transparent;
+  border: none;
+  font-size: 25px;
   transition: background-color 0.3s ease;
-  z-index: -1;
+  padding: 15px 25px;
 }
 
-.topnav li:hover::before {
-  margin: 20px;
+#about:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-.topnav li a {
+#terms {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  right: 9.7vw;
   color: #1b1b1b;
-  text-decoration: none;
-  padding: 10px;
+  border: none;
+  font-size: 25px;
+  transition: background-color 0.3s ease;
+  padding: 15px 25px;
 }
 
-.topnav li:hover a {
+#terms:hover {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-</style>
+#faq {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  right: 5vw;
+  color: #1b1b1b;
+  border: none;
+  font-size: 25px;
+  transition: background-color 0.3s ease;
+  padding: 15px 25px;
+}
+
+#faq:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+#blog {
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  position: absolute;
+  top: 0px;
+  right: 0vw;
+  color: #1b1b1b;
+  border: none;
+  font-size: 25px;
+  transition: background-color 0.3s ease;
+  padding: 15px 25px;
+}
+
+#blog:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+</script>
