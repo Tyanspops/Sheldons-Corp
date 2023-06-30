@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="/terms.css" />
+    <link rel="stylesheet" href="/faq.css" />
     <link href="https://fonts.cdnfonts.com/css/blogger-sans" rel="stylesheet" />
   </head>
   <body>
@@ -9,7 +9,7 @@
       id="bg"
       src="https://images.pexels.com/photos/355747/pexels-photo-355747.jpeg?cs=srgb&dl=pexels-pixabay-355747.jpg&fm=jpg"
     />
-    <form action="/aboutushome" method="POST">
+    <form action="/faqhome" method="POST">
       <button type="submit">
         <img
           id="logo"
@@ -17,74 +17,104 @@
         />
       </button>
     </form>
-    <form action="/aboutusaboutus" method="POST">
+    <form action="/faqaboutus" method="POST">
       <button id="about" type="submit">About Us</button>
     </form>
-    <form action="/aboutusterms" method="POST">
+    <form action="/faqterms" method="POST">
       <button id="terms" type="submit">Terms &amp Conditions</button>
     </form>
-    <form action="/aboutusfaq" method="POST">
+    <form action="/faqfaq" method="POST">
       <button id="faq" type="submit">FAQ</button>
     </form>
-    <form action="/aboutusblog" method="POST">
+    <form action="/faqblog" method="POST">
       <button id="blog" type="submit">Blog</button>
     </form>
-    <h1>T E R M S &nbsp &amp &nbsp C O N D I T I O N S</h1>
-    <div class="container">
-      <div class="image">
-        <img
-          id="bio"
-          src="https://64.media.tumblr.com/86d63a24730dd44edc2dc7d06fe05e8b/tumblr_o4202vrMEM1u9ghu7o1_500.png"
-        />
-      </div>
-      <div class="text">
-        <p>
-          Welcome to Sheldon's Corp! By using our website, you agree to comply
-          with the following terms and conditions:
-        </p>
+    <h1>F A Q</h1>
+    <p id="faq1" data-original-question="What is Sheldon's Corp?">
+      What is Sheldon's Corp?
+    </p>
+    <p
+      id="faq2"
+      data-original-question="How can I play Monopoly on Sheldon's Corp?"
+    >
+      How can I play Monopoly on Sheldon's Corp?
+    </p>
+    <p
+      id="faq3"
+      data-original-question="Is registration required to play games on Sheldon's Corp?"
+    >
+      Is registration required to play games on Sheldon's Corp?
+    </p>
+    <p
+      id="faq4"
+      data-original-question="Are there any fees associated with using Sheldon's Corp?"
+    >
+      Are there any fees associated with using Sheldon's Corp?
+    </p>
+    <p
+      id="faq5"
+      data-original-question="How can I contact customer support for Sheldon's Corp?"
+    >
+      How can I contact customer support for Sheldon's Corp?
+    </p>
 
-        <br />
-        <p>
-          Intellectual Property: All website content is our intellectual
-          property and protected by applicable laws. Do not modify, copy, or
-          distribute without our consent.
-        </p>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var faq1 = document.getElementById("faq1");
+        var faq2 = document.getElementById("faq2");
+        var faq3 = document.getElementById("faq3");
+        var faq4 = document.getElementById("faq4");
+        var faq5 = document.getElementById("faq5");
 
-        <p>
-          Website Use: Use the website lawfully and refrain from transmitting
-          unlawful or offensive material.
-        </p>
+        function changeText(faqElement) {
+          var currentText = faqElement.innerHTML;
+          var originalQuestion = faqElement.getAttribute(
+            "data-original-question"
+          );
 
-        <p>
-          User Contributions: Grant us a license to use your submitted content
-          and ensure it does not infringe third-party rights.
-        </p>
+          if (currentText === originalQuestion) {
+            if (faqElement === faq1) {
+              faqElement.innerHTML =
+                "Sheldon's Corp is a website dedicated to recreating the popular board game Monopoly and featuring Sheldon the Tiny Dinosaur as the star.";
+            } else if (faqElement === faq2) {
+              faqElement.innerHTML =
+                "To play Monopoly on Sheldon's Corp, navigate to the Games section on our website and select the Monopoly game. Follow the instructions provided to start playing.";
+            } else if (faqElement === faq3) {
+              faqElement.innerHTML =
+                "No, registration is not required to play games on Sheldon's Corp. You can play as a guest user. However, creating an account provides additional features and benefits.";
+            } else if (faqElement === faq4) {
+              faqElement.innerHTML =
+                "Using Sheldon's Corp is completely free. There are no fees associated with playing games or accessing our services.";
+            } else if (faqElement === faq5) {
+              faqElement.innerHTML =
+                "To contact customer support for Sheldon's Corp, you can reach out to our dedicated support team through our contact page. We strive to respond to all inquiries promptly.";
+            }
+          } else {
+            faqElement.innerHTML = originalQuestion;
+          }
+        }
 
-        <p>
-          Third-Party Links: We are not responsible for the content or practices
-          of third-party websites linked on our site.
-        </p>
+        faq1.addEventListener("click", function () {
+          changeText(faq1);
+        });
 
-        <p>
-          Limitation of Liability: We are not liable for indirect or
-          consequential damages arising from website use.
-        </p>
+        faq2.addEventListener("click", function () {
+          changeText(faq2);
+        });
 
-        <p>
-          Modifications: We may modify these terms and conditions without prior
-          notice.
-        </p>
+        faq3.addEventListener("click", function () {
+          changeText(faq3);
+        });
 
-        <p>
-          Governing Law: These terms and conditions are governed by the laws of
-          the United States of America.
-        </p>
+        faq4.addEventListener("click", function () {
+          changeText(faq4);
+        });
 
-        <p>
-          If you have any questions, please contact us at ryantao2007@gmail.com.
-        </p>
-      </div>
-    </div>
+        faq5.addEventListener("click", function () {
+          changeText(faq5);
+        });
+      });
+    </script>
   </body>
 </html>
 <style>
@@ -94,6 +124,7 @@
   color: #efeee8;
   font-family: "Blogger Sans", sans-serif;
   background-color: transparent;
+  color: #1b1b1b;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -107,14 +138,20 @@ body {
 }
 
 h1 {
-  font-size: 66px;
+  font-size: 80px;
   left: 50%;
   transform: translateX(-50%);
-  top: 5vh;
+  top: 15vh;
   position: fixed;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   background-color: transparent;
   color: #1b1b1b;
+}
+
+#bg {
+  width: 100vw;
+  height: 100vh;
+  filter: brightness(0.5) contrast(0.8);
 }
 
 #bio {
@@ -136,12 +173,6 @@ h1 {
   transform: translateX(-50%);
   top: 20vh;
   position: fixed;
-}
-
-#bg {
-  width: 100vw;
-  height: 100vh;
-  filter: brightness(0.5) contrast(0.8);
 }
 
 #logo {
@@ -241,5 +272,76 @@ h1 {
 
 #blog:hover {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+#faq1 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 35vh;
+  position: fixed;
+  background-color: transparent;
+  color: #efeee8;
+}
+
+#faq2 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 45vh;
+  position: fixed;
+  background-color: transparent;
+  color: #efeee8;
+}
+
+#faq3 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 55vh;
+  position: fixed;
+  background-color: transparent;
+  color: #efeee8;
+}
+
+#faq4 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 65vh;
+  position: fixed;
+  background-color: transparent;
+  color: #efeee8;
+}
+
+#faq5 {
+  margin-bottom: 20px;
+  font-size: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 75vh;
+  position: fixed;
+  background-color: transparent;
+  color: #efeee8;
+}
+
+.question {
+  cursor: pointer;
+  padding: 10px;
+  background-color: transparent;
+  color: #efeee8;
+  font-weight: normal;
+}
+
+.answer {
+  display: none;
+  padding: 10px;
+  background-color: transparent;
+  color: #efeee8;
+  font-weight: normal;
 }
 </style>
