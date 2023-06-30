@@ -1419,4 +1419,9 @@ var r6 = document.getElementById("r6");
 var r7 = document.getElementById("r7");
 var r8 = document.getElementById("r8");
 
+function gameaboutus(){
+  app.post("/", function(req,res) {
+     res.sendFile(__dirname + "/aboutus.html");
+});
+
 </script>
