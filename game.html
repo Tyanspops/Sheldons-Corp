@@ -197,23 +197,34 @@
       <button class="close-button2" onclick="closeAdvertisement2()">X</button>
     </div>
     <div class="bottomnav">
-        <p style="color: white">
-          <br />
-        </p>
-        <div class="buttonbottom">
-          <br />
-          <form action="/gameaboutus" method="POST">
-            <a href="/aboutus.html" id="about">About Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        </form>
-          <a id="terms" href=""
-            >Terms &amp Conditions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a
-          >
-          <a id="faqs" href="">FAQ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-          <a id="blog" href="">Blog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-        </div>
+      <p style="color: white">
         <br />
-        <p id="kms" style="color: white">© 2022. All rights reserved.</p>
+      </p>
+      <div class="buttonbottom">
+        <br />
+        <form action="/gameaboutus" method="POST">
+          <button type="submit" id="about">
+            About Us &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </button>
+        </form>
+        <form action="/gameterms" method="POST">
+          <button type="submit" id="terms">
+            Terms &amp Conditions &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </button>
+        </form>
+        <form action="/gamefaq" method="POST">
+          <button type="submit" id="faqs">
+            FAQ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </button>
+        </form>
+        <form action="/gameblog" method="POST">
+          <button type="submit" id="blog">
+            Blog &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </button>
+        </form>
       </div>
+      <p id="kms" style="color: white">© 2022. All rights reserved.</p>
+    </div>
   </body>
 </html>
 <style>
@@ -517,10 +528,9 @@ img {
   right: 75px;
   top: 75vh;
 }
-
-button {
+.startbutton {
   position: absolute;
-  top: 125vh;
+  top: 100vh;
   height: 100px;
   right: 200px;
   width: 260px;
@@ -676,6 +686,7 @@ button {
 #kms {
   font-size: 15px;
   background-color: #333333;
+  height: 45px;
 }
 
 .bottomnav {
@@ -698,54 +709,45 @@ button {
 
 .buttonbottom {
   font-size: 20px;
+  background-color: #333333;
 }
 
 .buttonbottom text {
   background-color: solid black;
+  font-size: 20px;
+  background-color: #333333;
 }
 
-.buttonbottom a:hover {
+.buttonbottom button:hover {
   font-size: 25px;
 }
 
 #about {
   text-decoration: none;
   color: white;
-}
-
-#how {
-  text-decoration: none;
-  color: white;
-}
-
-#privacy {
-  text-decoration: none;
-  color: white;
+  background-color: transparent;
+  border: none;
 }
 
 #terms {
   text-decoration: none;
   color: white;
-}
-
-#refund {
-  text-decoration: none;
-  color: white;
+  background-color: transparent;
+  border: none;
 }
 
 #faqs {
   text-decoration: none;
   color: white;
-}
-
-#gifting {
-  text-decoration: none;
-  color: white;
+  background-color: transparent;
+  border: none;
 }
 
 #blog {
   text-decoration: none;
   color: white;
+  background-color: transparent;
+  border: none;
 }
 
 .topnav {
@@ -753,11 +755,11 @@ button {
   overflow: hidden;
   height: 250px;
 }
-
 </style>
 <script>
   var start = false;
 const startbutton = document.createElement("button");
+startbutton.classList.add("startbutton");
 startbutton.textContent = "Start Game";
 document.body.appendChild(startbutton);
 startbutton.addEventListener("click", function () {
@@ -1420,5 +1422,4 @@ var r5 = document.getElementById("r5");
 var r6 = document.getElementById("r6");
 var r7 = document.getElementById("r7");
 var r8 = document.getElementById("r8");
-
 </script>
