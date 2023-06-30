@@ -13,6 +13,15 @@ h1 {
   background-color: #efeee8;
 }
 
+#title {
+  color: #efeee8;
+  background-color: #333333;
+  font-weight: normal;
+  font-size: 150px;
+  text-align: center;
+  height: 20vh;
+}
+
 h2 {
   background-color: #efeee8;
   color: #1b1b1b;
@@ -443,4 +452,85 @@ button {
   border-radius: 0px;
   text-align: center;
   font-weight: normal;
+}
+
+#kms {
+  font-size: 15px;
+  background-color: #333333;
+}
+
+.bottomnav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333333;
+  height: 130px;
+  width: 100vw;
+  text-align: center;
+  top: 1500px;
+}
+
+.bottomnav text {
+  padding: 30px 40px;
+  font-size: 10px;
+  background-color: #333333;
+}
+
+.buttonbottom {
+  font-size: 20px;
+}
+
+.buttonbottom text {
+  background-color: solid black;
+}
+
+.buttonbottom a:hover {
+  font-size: 25px;
+}
+
+#about {
+  text-decoration: none;
+  color: white;
+}
+
+#how {
+  text-decoration: none;
+  color: white;
+}
+
+#privacy {
+  text-decoration: none;
+  color: white;
+}
+
+#terms {
+  text-decoration: none;
+  color: white;
+}
+
+#refund {
+  text-decoration: none;
+  color: white;
+}
+
+#faqs {
+  text-decoration: none;
+  color: white;
+}
+
+#gifting {
+  text-decoration: none;
+  color: white;
+}
+
+#blog {
+  text-decoration: none;
+  color: white;
+}
+
+.topnav {
+  background-color: #333333;
+  overflow: hidden;
+  height: 250px;
 }
