@@ -77,9 +77,11 @@ button.addEventListener("click", function () {
       p1b8.style.display = "none";
     }
     p1p += randomNumber;
+    console.log(p1p);
     if (p1p >= 9) {
       p1p -= 8;
       p1m += 200;
+      console.log("added p1");
     }
     if (1 == p1p) {
       p1b1.style.display = "block";
@@ -321,9 +323,11 @@ button.addEventListener("click", function () {
       p2b8.style.display = "none";
     }
     p2p += randomNumber;
+    console.log(p2p);
     if (p2p >= 9) {
       p2p -= 8;
       p2m += 200;
+      console.log("added p2");
     }
     if (1 == p2p) {
       p2b1.style.display = "block";
